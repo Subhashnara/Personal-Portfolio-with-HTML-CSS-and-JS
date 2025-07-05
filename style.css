@@ -95,6 +95,21 @@
     transition: all 0.3 ease-in-out;
   }
   
+        .details-container.color-container {
+        display: flex;
+        flex-direction: column;
+        height: 100%; /* Ensures the card takes up the full height of its grid container */
+      }
+
+      .project-description {
+        flex-grow: 1; /* Allows the description to take up available space, pushing buttons down */
+        margin-bottom: 1rem; /* Adds some space above the buttons */
+      }
+
+      .btn-container {
+        margin-top: auto; /* Pushes the button container to the bottom of the card */
+      }
+
   .menu-links {
     position: absolute;
     top: 100%;
@@ -161,6 +176,19 @@
 .section-container {
   display: flex;
 }
+
+
+     /* --- ABOUT ME LIST STYLES --- */
+      .about-details-container .details-container ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 1rem;
+      }
+      .about-details-container .details-container li {
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: #555;
+      }
 
  /* PROFILE SECTION */
   
@@ -317,24 +345,42 @@
   margin: auto 0;
 }
 
-  /* EXPERIENCE SECTION */
-  
-  #experience {
-    position: relative;
-  }
-  
-  .experience-sub-title {
-    color: rgb(85, 85, 85);
-    font-weight: 600;
-    font-size: 1.75rem;
-    margin-bottom: 2rem;
-  }
-  
-  .experience-details-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
+      /* --- NEW EXPERIENCE SECTION STYLES --- */
+      #experience .about-containers {
+        justify-content: center;
+        gap: 2rem;
+      }
+      #experience .details-container {
+        padding: 1.5rem;
+        flex-basis: 30%; /* Adjust basis for 3 cards */
+        text-align: center;
+      }
+      #experience .details-container h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+      #experience .details-container p {
+        text-align: left;
+        line-height: 1.6;
+      }
+      #experience .company-info, #experience .mentor-info {
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      #experience .mentor-info {
+        margin-top: 2rem;
+      }
+      #experience .company-info a, #experience .mentor-info a {
+        text-decoration: none;
+        color: #333;
+        transition: color 0.3s ease;
+      }
+      #experience .company-info a:hover, #experience .mentor-info a:hover {
+        color: #000;
+        text-decoration: underline;
+      }
   
   .article-container {
     display: flex;
@@ -433,6 +479,83 @@
     text-align: center;
   }
 
-  
+      /* --- FLEXBOX PHOTO GALLERY STYLES --- */
+      .photo-gallery-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+      .gallery-item {
+        flex-grow: 1;
+        max-width: 400px; /* Adjust max-width as needed */
+        margin-bottom: 1rem;
+      }
+      .gallery-item img {
+        width: 100%;
+        height: auto; /* This is key to maintaining original orientation */
+        border-radius: 1rem;
+        cursor: pointer;
+        transition: box-shadow 0.3s ease, filter 0.3s ease;
+        display: block;
+      }
+      .gallery-item img:hover {
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        filter: brightness(1.03);
+      }
 
-  
+      /* --- PHOTO OVERLAY STYLES --- */
+      #photo-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.85);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      #photo-overlay.show {
+        display: flex;
+        opacity: 1;
+      }
+      .overlay-content {
+        position: relative;
+        width: 80vw;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #enlarged-photo {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 0.5rem;
+        object-fit: contain;
+        transform: scale(0.8);
+        transition: transform 0.3s ease;
+      }
+      #photo-overlay.show #enlarged-photo {
+        transform: scale(1);
+      }
+      #close-overlay {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        color: white;
+        font-size: 2rem;
+        font-family: Arial, sans-serif;
+        cursor: pointer;
+        background: #333;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border: 2px solid white;
+      }
