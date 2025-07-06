@@ -54,6 +54,9 @@
     #about .section-container {
         display: block;
     }  
+  .photo-gallery-container {
+    column-count: 2; /* Two columns for tablets */
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -123,6 +126,10 @@
   .about-me-text {
     font-size: 1rem; /* Use important to override other styles if necessary */
     line-height: 1.6;
+  }
+
+  .photo-gallery-container {
+    column-count: 1; /* A single column for mobile */
   }
 }
 
