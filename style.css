@@ -4,6 +4,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 
+/* Add these new rules for the About Me section */
+.about-pic-container {
+  height: 500px;
+  width: 300px;
+  margin: auto 0;
+}
+
+.about-me-text {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -479,31 +493,36 @@
     text-align: center;
   }
 
-      /* --- FLEXBOX PHOTO GALLERY STYLES --- */
-      .photo-gallery-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-        margin-top: 2rem;
-      }
-      .gallery-item {
-        flex-grow: 1;
-        max-width: 400px; /* Adjust max-width as needed */
-        margin-bottom: 1rem;
-      }
-      .gallery-item img {
-        width: 100%;
-        height: auto; /* This is key to maintaining original orientation */
-        border-radius: 1rem;
-        cursor: pointer;
-        transition: box-shadow 0.3s ease, filter 0.3s ease;
-        display: block;
-      }
-      .gallery-item img:hover {
-        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        filter: brightness(1.03);
-      }
+/* Replace your old .photo-gallery-container styles with these */
+.photo-gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start; 
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.gallery-item {
+  width: 300px; /* Give a consistent base width */
+  flex-grow: 1; /* Allow items to grow to fill space */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  z-index: 10; /* This ensures the hovered item appears on top */
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto; /* This is the key to maintaining aspect ratio */
+  border-radius: 1rem;
+  cursor: pointer;
+  display: block;
+}
+
 
       /* --- PHOTO OVERLAY STYLES --- */
       #photo-overlay {

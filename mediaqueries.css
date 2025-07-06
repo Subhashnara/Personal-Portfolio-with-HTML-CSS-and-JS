@@ -24,7 +24,7 @@
     margin-top: 2rem;
   }
   #profile,
-  .section-container {
+  #about .section-container {
     display: block;
   }
   .arrow {
@@ -42,9 +42,18 @@
     height: 275px;
     margin: 0 auto 2rem;
   }
+  #about .section__pic-container {
+      width: 275px;
+      height: 420px; /* Adjust height for mobile */
+      margin: 0 auto 2rem;
+  }
   .about-containers {
     margin-top: 0;
   }
+
+    #about .section-container {
+        display: block;
+    }  
 }
 
 @media screen and (max-width: 600px) {
@@ -68,6 +77,13 @@
   .btn-container {
     flex-wrap: wrap;
   }
+    /* This rule adjusts the about me picture container on mobile */
+  .about-pic-container {
+    width: 275px;
+    height: auto; /* Allow height to adjust automatically */
+    margin: 0 auto 2rem;
+  }
+
   .contact-info-container {
     margin: 0;
   }
@@ -91,6 +107,9 @@
     height: 46vw;
     justify-content: center;
   }
+  #about .section__pic-container {
+      height: 60vw; /* Further adjust height for smaller screens */
+  }
   .section__text__p2 {
     font-size: 1.25rem;
   }
@@ -100,4 +119,10 @@
   .text-container {
     text-align: justify;
   }
+  /* Reduce font size for about me text on mobile */
+  .about-me-text {
+    font-size: 1rem; /* Use important to override other styles if necessary */
+    line-height: 1.6;
+  }
 }
+
