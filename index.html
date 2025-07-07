@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portrfolio</title>
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css">
 </head>
 
 <body>
@@ -88,7 +88,6 @@
     </div>
     <div class="about-details-container">
       <div class="text-container">
-        <!-- The inline style was removed from this <p> tag -->
         <p class="about-me-text">
           I'm <b>Pavan</b>, and I see the digital world as a series of fascinating puzzles. From decoding vast datasets to anticipating security threats, I thrive on bringing order to chaos. I believe that true progress happens when we not only build amazing tools but also ensure they can be used safely and effectively. My goal is to be the person who untangles the technical knots, so others can work efficiently and confidently.
         </p>
@@ -96,10 +95,10 @@
       <div class="about-containers" style="margin-top: 2rem;">
         <div class="details-container">
           <h3>Areas of Focus</h3>
-          <ul>
-            <li>Data Analysis & Visualization</li>
-            <li>AI & Cybersecurity Research</li>
-            <li>ETL & Data Pipelines</li>
+          <ul class="focus-list">
+            <li><a href="#project-healthcare">Data Analysis & Visualization</a></li>
+            <li><a href="#projects">AI & Cybersecurity Research</a></li>
+            <li><a href="#project-healthcare">ETL & Data Pipelines</a></li>
             <li>Cloud & Big Data</li>
           </ul>
         </div>
@@ -240,6 +239,7 @@
             </div>
             <h2 class="experience-sub-title project-title">Accessible Cybersecurity Education</h2>
             <p class="project-description">Published research on a novel "Prompt Tree" framework using LLMs to enhance cybersecurity education.</p>
+            <p class="tech-stack"> <b>Tech stack:</b> LLMs, Cybersecurity Frameworks, Prompt Engineering, Microsoft Visio</p>
             <div class="btn-container">
               <button class="btn btn-color-2 project-btn" onclick="window.open('https://doi.org/10.1007/978-3-031-76273-4_9', '_blank')">
                 CAINE '24
@@ -253,6 +253,7 @@
             </div>
             <h2 class="experience-sub-title project-title">LLM Embeddings for Cybersecurity</h2>
             <p class="project-description">Developed a specialized LLM Q&A system for cybersecurity training, published at ACMSE 2025.</p>
+            <p class="tech-stack"><b>Tech Stack:</b> Text Embeddings, Google Gemini API, RAG, Prompt Engineering, LLMs, Python, Gradio</p>
             <div class="btn-container">
               <button class="btn btn-color-2 project-btn" onclick="window.open('https://doi.org/10.1145/3696673.3723069', '_blank')">
                 ACMSE '25
@@ -266,6 +267,7 @@
             </div>
             <h2 class="experience-sub-title project-title">Master's Thesis: Prompt Tree</h2>
             <p class="project-description">Designed and evaluated the Prompt Tree framework, a novel prompt engineering approach for cybersecurity training.</p>
+            <p class="tech-stack"><b>Tech stack:</b> Framework development, User evaluation, A/B testing, Microsoft Suite, LLMs, Cybersecurity Frameworks, Prompt Engineering, Microsoft Visio </p>
             <div class="btn-container">
               <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Subhashnara'">
                 Learn More
@@ -281,6 +283,7 @@
             </div>
             <h2 class="experience-sub-title project-title">Healthcare Access Analyzer</h2>
             <p class="project-description">Analyzed public datasets to identify healthcare deserts and visualize care disparities using Python and Streamlit.</p>
+            <p class="tech-stack"><b>Tech stack:</b> API, Python(Pandas, Matplotlib, Seaborn, Folium, Geopandas), Requests, Git & GitHub, Streamlit, EHR</p>
             <div class="btn-container">
               <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Subhashnara/Local-Healthcare-Access-Analyzer'">
                 Github
@@ -309,6 +312,7 @@
             </div>
             <h2 class="experience-sub-title project-title">Phishing Keylogger</h2>
             <p class="project-description">Led a team to develop a proof-of-concept phishing keylogger to demonstrate system vulnerabilities.</p>
+            <p class="tech-stack"><b>Tech Stack:</b> Phishing & Keylogger threats, Vulnerability analysis, Mitigation Strategies, Python, SMTP, Product anaysis/comparision</p>
             <div class="btn-container">
               <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Subhashnara/Phishing-Keylogger'">
                 Github
